@@ -11,7 +11,7 @@
         // Controlar la pausa de Cordova y reanudar eventos
         document.addEventListener( 'pause', onPause.bind( this ), false );
         document.addEventListener( 'resume', onResume.bind( this ), false );
-        
+        document.getElementById('01').addEventListener('click',onclick1,false);
         // TODO: Cordova se ha cargado. Haga aquí las inicializaciones que necesiten Cordova.
         var parentElement = document.getElementById('deviceready');
         var listeningElement = parentElement.querySelector('.listening');
@@ -27,4 +27,11 @@
     function onResume() {
         // TODO: esta aplicación se ha reactivado. Restaure el estado de la aplicación aquí.
     };
+    function onclick1() {
+        
+        alert("No hay ningun menu diseñado\n Desde aqui podre ir a cualquier pagina de tu web" +
+            "\n De momento voy a la principal");
+        window.open('https://www.inliveservice.com');
+    };
+
 } )();
